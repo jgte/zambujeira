@@ -38,40 +38,27 @@
   * --------------------------------------- */
   h1{
     font-size: 5em;
-    font-family: arial,helvetica;
-    margin:0;
-    padding:0;
-    color: #660033;
-    text-shadow: 2px 2px 3px #D1FAFF;
   }
   h2{
     font-size: 4em;
-    font-family: arial,helvetica;
-    margin:0;
-    padding:0;
-    color: #660033;
-    text-shadow: 1px 1px 3px #D1FAFF;
   }
   h3{
     font-size: 3em;
-    font-family: arial,helvetica;
-    margin:0;
-    padding:0;
-    color: #660033;
-    text-shadow: 1px 1px 3px #D1FAFF;
-  }
-
-  /* Centered texts in each section
-  * --------------------------------------- */
-  .section{
-    text-align:center;
   }
 
   /* Backgrounds will cover all the section
   * --------------------------------------- */
   .section{
+    text-align:center;
+    vertical-align: middle;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     padding: 5% 0 0 0;
+    font-family: arial,helvetica;
+    margin:0;
+    color: white;
+    text-shadow: 2px 2px 3px black;
   }
   .slide{
     background-size: cover;
@@ -81,11 +68,13 @@
   * --------------------------------------- */
   #intro{
     background-image: url(imgs/palheirao.jpg);
-    padding: 10% 0 0 0;
   }
   #casa{
     background-image: url(imgs/casa.png);
-    padding: 20% 0 0 0;
+  }
+  #localizacao{
+    padding: 30% 0 0 0;
+    background-image: url(imgs/localizacao.png);
   }
 
   /*Adding background for the slides
@@ -141,9 +130,6 @@
     text-align:center;
     color: #f2f2f2;
     padding: 20px 0 0 0;
-  }
-
-  #footer{
     bottom:0px;
   }
 
@@ -155,15 +141,18 @@
     </script>
   <![endif]-->
 
+  <!-- https://github.com/alvarotrigo/fullPage.js#fullpagejs -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
-
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.js"></script>
 
   <script type="text/javascript">
     $(document).ready(function() {
       $('#fullpage').fullpage({
-        verticalCentered: false
+        verticalCentered: false,
+        navigationTooltips: ['', 'Fachada','Localização','Quarto NO', 'Quarto SE', 'Quarto SO','Quarto NO','Cozinha','Sala de Jantar','Sala de TV','Casa de banho R/C','Casa de Banho 1o andar','Terraço','Serviços','Disponibilidade'],
+        showActiveTooltip: true,
+        navigation: true,
       });
     });
   </script>
@@ -181,11 +170,13 @@
     <h2>Rua da Fonte 1</h2>
     <h2>7630-776 Zambujeira do Mar</h2>
     <h3>Portugal</h3>
-    <a href="https://goo.gl/maps/wktc4L6BSeA2">Google Maps</a>
+  </div>
+  <div class="section" id="localizacao">
+    <h2><a href="https://goo.gl/maps/wktc4L6BSeA2">Google Maps</a></h2>
   </div>
   <div class="section" id="blueroom">
     <h1>Quarto Noroeste</h1>
-    <h2>Uma cama de casal (183x124cm)</h2>
+    <h2>Uma cama de casal (183x120cm)</h2>
     <h2>Uma cama individual (190x95cm)</h2>
     <h3>Janela para Este</h3>
   </div>
